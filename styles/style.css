@@ -15,7 +15,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: lighter;
 }
 
-
 /*  DO NOT REMOVE - Styling for the label showing the viewport width */
 .viewport-dimensions {
   position: fixed;
@@ -175,58 +174,60 @@ header {
 .btn-blue {
   background-color: #007bff;
 }
-
-
   
 /* Write your CSS below */
-
-
-@media ( width < 760px ) {
-  
-  header nav .navbar { 
+@media (width < 760px) {
+  header nav .navbar {
     flex-direction: column;
     align-items: center;
 
     li {
       width: 100%;
-      border-bottom:#ffffff solid 1px;
+      border-bottom: #ffffff solid 1px;
+    }
+  }
+
+  main {
+    .articles-container {
+      flex-direction: column;
+      gap: 40px;
+
+      .article {
+        width: 100%;
+      }
     }
 
-  } 
+    .main-article {
+      flex-direction: column;
+      align-items: center;
 
-  .articles-container {
-    flex-direction: column;
-    gap: 40px;
+      .content {
+        width: 100%;
+      }
+      .image {
+        width: 100%;
+      }
+    }
+  }
+}
 
+@media (width < 1024px) and (width > 760px) {
+  header nav .navbar {
+    justify-content: space-evenly;
+    justify-items: center;
+
+    li {
+      width: 100%;
+    }
+  }
+
+  main .articles-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .article {
-      width: 100%;
-    }
-  }
-
-  .main-article {
-    flex-direction: column;
-    align-items: center;
-    
-    .content {
-      width: 100%;
-    }
-    .image {
-      width: 100%;
+      width: 45%;
     }
   }
 }
-  
-
-@media (width < 1024px) and ( width > 760px) {
-    
-  .navbar { 
-    justify-content: space-evenly;
-    justify-items:center;
-
-    li {
-      width: 100%;  
-    }
-  }
-}
-
