@@ -232,3 +232,20 @@ header {
     }
   }
 }
+
+@media (width < 480px){
+  header nav {
+    .navbar{
+      display: none
+    }
+
+    .hamburguer-menu {
+      display: block;
+    }    
+  } 
+}
+
+.hamburguer-menu {
+  display: none;
+  padding: 5px
+}
